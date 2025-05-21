@@ -32,4 +32,61 @@ public class SongsRepository(IMongoDatabase db)
             new InsertOneOptions(),
             cancellationToken);
     }
+
+    public async Task<(long count, List<SongDocument>)> GetAll(
+        IEnumerable<Guid>? songIds = null,
+        IEnumerable<string>? genres = null,
+        IEnumerable<string>? tags = null,
+        int? skip = 0,
+        int? limit = 100,
+        CancellationToken cancellationToken = default)
+    {
+        var collection = _songsCollection;
+
+        var clauses = new List<FilterDefinition<SongDocument>>();
+        var filterBuilder = new FilterDefinitionBuilder<SongDocument>();
+
+        if (songIds != null && songIds.Any())
+        {
+            var songIdFilter = filterBuilder.In(x => x.SongId, songIds);
+            clauses.Add(songIdFilter);
+        }
+
+        if (genres != null && genres.Any())
+        {
+            var genreFilter = filterBuilder.In(x => x.Genre, genres);
+            clauses.Add(genreFilter);
+        }
+
+        if (tags != null && tags.Any())
+        {
+            var tagFilter = filterBuilder.AnyIn(x => x.Tags, tags);
+            clauses.Add(tagFilter);
+        }
+
+        var options = new FindOptions<SongDocument>
+        {
+            Skip = skip,
+            Limit = limit,
+            Sort = Builders<SongDocument>.Sort.Descending(x => x.Created)
+        };
+
+        var filter = filterBuilder.And(clauses);
+        if (clauses.Count == 0)
+            filter = filterBuilder.Empty;
+
+        var countTask = collection.CountDocumentsAsync(
+            filter,
+            null,
+            cancellationToken: cancellationToken);
+
+        var getTask = collection.FindAsync(
+            filter,
+            options,
+            cancellationToken: cancellationToken);
+
+        await Task.WhenAll(countTask, getTask);
+
+        return (countTask.Result, getTask.Result.ToList());
+    }
 }
