@@ -9,4 +9,5 @@ namespace MusicStore.Infrastructure.MongoDbPersistence.Documents;
 public class CollectionNames
 {
     public const string Songs = "Songs";
+    public const string Playlists = "Playlists";
 }

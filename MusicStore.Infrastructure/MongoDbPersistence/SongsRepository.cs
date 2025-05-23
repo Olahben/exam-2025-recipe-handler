@@ -72,6 +72,7 @@ public class SongsRepository(IMongoDatabase db)
         };
 
         var filter = filterBuilder.And(clauses);
+        // To avoid errors when no filters are applied, we need to set the filter to empty
         if (clauses.Count == 0)
             filter = filterBuilder.Empty;
 

@@ -29,6 +29,7 @@ builder.Services.AddScoped(sp =>
 });
 
 builder.Services.AddScoped<SongsRepository>();
+builder.Services.AddScoped<PlaylistsRepository>();
 
 var assemblies = new[]
 {
