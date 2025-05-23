@@ -7,6 +7,11 @@ namespace test_exam_music_store.API.Songs;
 
 public partial class SongsApi
 {
+    /// <summary>
+    /// Creates a new song with the specified genre and tags.
+    /// </summary>
+    /// <param name="input"></param>
+    /// <returns></returns>
     [HttpPost]
     [ProducesResponseType(typeof(AddSongResponse), 200)]
     public async Task<IActionResult> Add([FromBody] AddSongRequest input)

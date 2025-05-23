@@ -8,6 +8,11 @@ namespace test_exam_music_store.API.Playlists;
 
 public partial class PlaylistsApi
 {
+    /// <summary>
+    /// Creates a new playlist with the specified name, song IDs, and occasions. And validates the request.
+    /// </summary>
+    /// <param name="input"></param>
+    /// <returns></returns>
     [HttpPost]
     [ProducesResponseType(typeof(AddPlaylistResponse), 200)]
     public async Task<IActionResult> Add([FromBody] AddPlaylistRequest input)
