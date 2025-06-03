@@ -16,7 +16,7 @@ public class RecipesRepository(IMongoDatabase db)
         IEnumerable<string> ingredients,
         IEnumerable<string> instructions,
         TimeOnly preparationTime,
-        CancellationToken cancellationToken)
+        CancellationToken cancellationToken = default)
     {
         var collection = _recipesCollection;
         var now = DateTime.UtcNow;
