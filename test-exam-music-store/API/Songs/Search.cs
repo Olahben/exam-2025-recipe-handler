@@ -10,12 +10,6 @@ public partial class SongsApi
     /// <summary>
     /// Searches for songs based on the specified criteria.
     /// </summary>
-    /// <param name="SongIds"></param>
-    /// <param name="Genres"></param>
-    /// <param name="Tags"></param>
-    /// <param name="Skip"></param>
-    /// <param name="Limit"></param>
-    /// <returns></returns>
     [HttpGet]
     [ProducesResponseType(typeof(GetAllResponse), 200)]
     public async Task<IActionResult> Search(
