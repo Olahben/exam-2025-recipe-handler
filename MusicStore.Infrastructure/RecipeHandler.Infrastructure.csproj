@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MusicStore.Client\MusicStore.Client.csproj" />
+    <ProjectReference Include="..\MusicStore.Client\RecipeHandler.Client.csproj" />
   </ItemGroup>
 
 </Project>

@@ -16,8 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MusicStore.Client\MusicStore.Client.csproj" />
-    <ProjectReference Include="..\MusicStore.Infrastructure\MusicStore.Infrastructure.csproj" />
+    <ProjectReference Include="..\MusicStore.Client\RecipeHandler.Client.csproj" />
+    <ProjectReference Include="..\MusicStore.Infrastructure\RecipeHandler.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

@@ -28,8 +28,7 @@ builder.Services.AddScoped(sp =>
     return client.GetDatabase(settings.DatabaseName);
 });
 
-builder.Services.AddScoped<SongsRepository>();
-builder.Services.AddScoped<PlaylistsRepository>();
+builder.Services.AddScoped<RecipesRepository>();
 
 var assemblies = new[]
 {
