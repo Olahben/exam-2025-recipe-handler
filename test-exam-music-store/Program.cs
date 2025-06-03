@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
-using MusicStore.Client.MongoDb;
-using MusicStore.Infrastructure.MongoDbPersistence;
+using RecipeHandler.Client.MongoDb;
+using RecipeHandler.Infrastructure.MongoDbPersistence;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -32,8 +32,8 @@ builder.Services.AddScoped<RecipesRepository>();
 
 var assemblies = new[]
 {
-    typeof(test_exam_music_store.AssemblyMarker).Assembly,
-    typeof(MusicStore.Infrastructure.AssemblyMarker).Assembly
+    typeof(RecipeHandler.AssemblyMarker).Assembly,
+    typeof(RecipeHandler.Infrastructure.AssemblyMarker).Assembly
 };
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(assemblies));
 

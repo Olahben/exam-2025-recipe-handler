@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MusicStore.Infrastructure.Features.Recipes.Models;
+namespace RecipeHandler.Infrastructure.Features.Recipes.Models;
 
 public class Recipe
 {

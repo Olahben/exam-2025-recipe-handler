@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MusicStore.Client.Exceptions;
+namespace RecipeHandler.Client.Exceptions;
 
 public class BadRequestException : Exception
 {

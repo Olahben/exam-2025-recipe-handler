@@ -1,4 +1,4 @@
-﻿namespace test_exam_music_store;
+﻿namespace RecipeHandler;
 
 public interface AssemblyMarker
 {

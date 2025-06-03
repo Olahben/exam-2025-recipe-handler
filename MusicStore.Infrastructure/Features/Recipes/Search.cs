@@ -1,8 +1,8 @@
 ﻿using MediatR;
-using MusicStore.Client;
-using MusicStore.Infrastructure.MongoDbPersistence;
+using RecipeHandler.Client;
+using RecipeHandler.Infrastructure.MongoDbPersistence;
 
-namespace MusicStore.Infrastructure.Features.Recipes;
+namespace RecipeHandler.Infrastructure.Features.Recipes;
 
 public static class Search
 {

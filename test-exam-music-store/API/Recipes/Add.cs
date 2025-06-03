@@ -1,21 +1,23 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using MusicStore.Client;
+using RecipeHandler.Client;
+using RecipeHandler.Infrastructure.Features.Recipes;
 
 namespace RecipeHandler.API.Recipes;
 
 public partial class RecipesApi
 {
-    /// <summary>
-    /// Creates a new recipe with the specified name and ingredients.
-    /// </summary>
-    /// <param name="input"></param>
-    /// <returns></returns>
+    /// <summary>  
+    /// Creates a new recipe with the specified name and ingredients.  
+    /// </summary>  
+    /// <param name="input"></param>  
+    /// <returns></returns>  
     [HttpPost]
     [ProducesResponseType(typeof(AddRecipeResponse), 200)]
     public async Task<IActionResult> Add([FromBody] AddRecipeRequest input)
     {
-        IRequest<AddRecipeResponse> command = new MusicStore.Infrastructure.Features.Recipes.Add.Command(
+        // Explicitly specify the correct type for the command  
+        IRequest<RecipeHandler.Client.AddRecipeResponse> command = new Add.Command(
             Name: input.Name,
             Category: input.Category,
             TasteProfile: input.TasteProfile,

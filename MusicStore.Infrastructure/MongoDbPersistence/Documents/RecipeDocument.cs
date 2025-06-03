@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MusicStore.Infrastructure.MongoDbPersistence.Documents;
+namespace RecipeHandler.Infrastructure.MongoDbPersistence.Documents;
 
 public class RecipeDocument
 {

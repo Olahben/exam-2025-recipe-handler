@@ -1,14 +1,9 @@
 ﻿using MediatR;
-using MusicStore.Client.Exceptions;
-using MusicStore.Client;
-using MusicStore.Infrastructure.MongoDbPersistence;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using RecipeHandler.Client.Exceptions;
+using RecipeHandler.Client;
+using RecipeHandler.Infrastructure.MongoDbPersistence;
 
-namespace MusicStore.Infrastructure.Features.Recipes;
+namespace RecipeHandler.Infrastructure.Features.Recipes;
 
 public static class Add
 {

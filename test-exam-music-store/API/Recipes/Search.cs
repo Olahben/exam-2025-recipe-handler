@@ -1,6 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using MusicStore.Client;
+using RecipeHandler.Client;
 
 namespace RecipeHandler.API.Recipes;
 
@@ -18,7 +18,7 @@ public partial class RecipesApi
         [FromQuery] List<string>? categories,
         [FromQuery] List<string>? tasteProfiles)
     {
-        IRequest<SearchRecipesResponse> query = new MusicStore.Infrastructure.Features.Recipes.Search.Command(
+        IRequest<SearchRecipesResponse> query = new RecipeHandler.Infrastructure.Features.Recipes.Search.Command(
             RecipeIds: recipeIds,
             Categories: categories,
             TasteProfiles: tasteProfiles);

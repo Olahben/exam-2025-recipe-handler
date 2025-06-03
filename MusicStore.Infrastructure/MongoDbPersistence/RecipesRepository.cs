@@ -1,8 +1,8 @@
-﻿using global::MusicStore.Infrastructure.MongoDbPersistence.Documents;
-using MongoDB.Bson;
+﻿using MongoDB.Bson;
 using MongoDB.Driver;
+using RecipeHandler.Infrastructure.MongoDbPersistence.Documents;
 
-namespace MusicStore.Infrastructure.MongoDbPersistence;
+namespace RecipeHandler.Infrastructure.MongoDbPersistence;
 
 public class RecipesRepository(IMongoDatabase db)
 {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MusicStore.Infrastructure;
+namespace RecipeHandler.Infrastructure;
 
 public interface AssemblyMarker
 {

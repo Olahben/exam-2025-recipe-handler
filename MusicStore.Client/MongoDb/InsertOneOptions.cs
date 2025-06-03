@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MusicStore.Client.MongoDb;
+namespace RecipeHandler.Client.MongoDb;
 
 public class InsertOneOptions
 {
