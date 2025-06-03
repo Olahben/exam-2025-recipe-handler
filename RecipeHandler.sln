@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipeHandler.Client", "Mus
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipeHandler.Infrastructure", "MusicStore.Infrastructure\RecipeHandler.Infrastructure.csproj", "{2C0A13A1-4F96-4809-9D23-80810375872D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipesHandler.Tests", "RecipesHandler.Tests\RecipesHandler.Tests.csproj", "{75B534D1-9F20-47BB-B74B-02D1F6571A76}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,9 +31,16 @@ Global
 		{2C0A13A1-4F96-4809-9D23-80810375872D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C0A13A1-4F96-4809-9D23-80810375872D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C0A13A1-4F96-4809-9D23-80810375872D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75B534D1-9F20-47BB-B74B-02D1F6571A76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75B534D1-9F20-47BB-B74B-02D1F6571A76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75B534D1-9F20-47BB-B74B-02D1F6571A76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75B534D1-9F20-47BB-B74B-02D1F6571A76}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{75B534D1-9F20-47BB-B74B-02D1F6571A76} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7CDE5F0F-50F3-4969-8E2C-49D04D1FAA5E}
