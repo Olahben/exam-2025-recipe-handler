@@ -6,16 +6,16 @@ namespace RecipeHandler.Infrastructure.Features.Recipes;
 
 public static class Search
 {
-    public record Command(
+    public record Query(
         List<Guid>? RecipeIds = null,
         List<string>? Categories = null,
         List<string>? TasteProfiles = null) : IRequest<SearchRecipesResponse>;
 
     public class Handler(
-        RecipesRepository recipesRepository) : IRequestHandler<Command, SearchRecipesResponse>
+        RecipesRepository recipesRepository) : IRequestHandler<Query, SearchRecipesResponse>
     {
         public async Task<SearchRecipesResponse> Handle(
-            Command cmd,
+            Query cmd,
             CancellationToken cancellationToken)
         {
             var (count, recipes) = await recipesRepository.GetAll(

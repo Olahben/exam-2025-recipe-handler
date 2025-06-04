@@ -18,7 +18,7 @@ public partial class RecipesApi
         [FromQuery] List<string>? categories,
         [FromQuery] List<string>? tasteProfiles)
     {
-        IRequest<SearchRecipesResponse> query = new RecipeHandler.Infrastructure.Features.Recipes.Search.Command(
+        IRequest<SearchRecipesResponse> query = new RecipeHandler.Infrastructure.Features.Recipes.Search.Query(
             RecipeIds: recipeIds,
             Categories: categories,
             TasteProfiles: tasteProfiles);
