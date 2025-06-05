@@ -17,6 +17,7 @@ public class TestFixture
         var services = new ServiceCollection();
 
         services.AddSingleton<RecipesRepository>();
+        services.AddSingleton<MenusRepository>();
 
         services.AddSingleton(_ => CreateMongoDatabase());
 
