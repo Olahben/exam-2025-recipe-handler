@@ -37,7 +37,9 @@ public static class Search
                     TasteProfile = x.TasteProfile,
                     Ingredients = x.Ingredients,
                     Instructions = x.Instructions,
-                    PreparationTime = x.PreparationTime
+                    PreparationTime = x.PreparationTime,
+                    CreatedAt = x.Created,
+                    ModifiedAt = x.ModifiedAt
                 }).ToList()
             };
         }

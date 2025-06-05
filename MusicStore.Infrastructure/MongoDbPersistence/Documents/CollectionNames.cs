@@ -9,4 +9,5 @@ namespace RecipeHandler.Infrastructure.MongoDbPersistence.Documents;
 public class CollectionNames
 {
     public const string Recipes = "Recipes";
+    public const string Menus = "Menus";
 }

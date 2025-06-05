@@ -29,6 +29,7 @@ builder.Services.AddScoped(sp =>
 });
 
 builder.Services.AddScoped<RecipesRepository>();
+builder.Services.AddScoped<MenusRepository>();
 
 var assemblies = new[]
 {
