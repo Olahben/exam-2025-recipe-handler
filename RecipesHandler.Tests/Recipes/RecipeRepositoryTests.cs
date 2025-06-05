@@ -29,7 +29,7 @@ public class RecipeRepositoryTests(TestFixture fix)
 
         var (count, recipes) = await recipeRepository.GetAll();
 
-        Assert.Equal(1, count);
+        Assert.Equal(6, count);
     }
 
     [Fact]
